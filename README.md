@@ -11,11 +11,6 @@ Just changed some dependencies to accommodate java7.
 Please copy the source code to your computer and use java7 to compile and package it.
 Due to the use of local packages, Maven's dependency delivery was interrupted, and some dependencies needed for the project need to be added.Or upload the package to Maven's private server
 
-Subsequent uses will fully use the rules of version 1.2.
-
-Welcome to my home page:[Mount Cloud](http://www.mountcloud.org)
-
-
 ## Update 1.2 Note
 
 Requested parameters support custom complex types and Enum types.
@@ -23,15 +18,15 @@ Requested parameters support custom complex types and Enum types.
 
 ## Use You Project
 
-maven:
+maven dependency.
+
 	<dependency>
 		<groupId>org.mountcloud</groupId>
 		<artifactId>graphql-client</artifactId>
 		<version>1.2-java7</version>
-		<scope>system</scope><!--system，类似provided，需要显式提供依赖的jar以后，Maven就不会在Repository中查找它-->
-		<systemPath>${project.basedir}/lib/graphql-client-1.2-java7.jar</systemPath> <!--项目根目录下的lib文件夹下-->
+		<scope>system</scope>
+		<systemPath>${project.basedir}/lib/graphql-client-1.2-java7.jar</systemPath>
 	</dependency
-	
 	<!--some dependencies needed for the project need to be added-->
 	 <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
@@ -238,9 +233,13 @@ mutation{
 
 当前版本仅支持post请求
 
-你需要java1.8和maven.
+您需要java1.7和maven。
 
-欢迎观临我的主页:[Mount Cloud](http://www.mountcloud.org)
+更改了一些依赖项以适应java7。
+
+请将源代码复制到您的计算机上，并使用java7对其进行编译和打包。
+
+由于使用本地包，Maven的依赖项传递中断，需要添加项目所需的一些依赖项。或者将包上传到Maven的私有服务器
 
 
 ## 更新 1.2 日志
@@ -253,10 +252,29 @@ mutation{
 maven:
 
 	<dependency>
-		    <groupId>org.mountcloud</groupId>
-		    <artifactId>graphql-client</artifactId>
-		    <version>1.2</version>
-	</dependency>
+		<groupId>org.mountcloud</groupId>
+		<artifactId>graphql-client</artifactId>
+		<version>1.2-java7</version>
+		<scope>system</scope>
+		<systemPath>${project.basedir}/lib/graphql-client-1.2-java7.jar</systemPath>
+	</dependency
+	<!--some dependencies needed for the project need to be added-->
+	 <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jdk7</artifactId>
+            <version>2.6.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.5.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.5.3</version>
+        </dependency>
 
 ## Insall Project
 
